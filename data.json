@@ -1,10 +1,10 @@
 data = {
     "intents": [
-        {"tag": "greeting", "patterns": ["Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day"], "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"], "context": [""]},
+        {"tag": "greeting", "patterns": ["Hi there", "How are you", "Good Morning","Is anyone there?", "Hey", "Hola", "Hello", "Good day"], "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"], "context": [""]},
         {"tag": "goodbye", "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"], "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."], "context": [""]},
         {"tag": "thanks", "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"], "responses": ["Happy to help!", "Any time!", "My pleasure"], "context": [""]},
         {"tag": "noanswer", "patterns": [], "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"], "context": [""]},
-        {"tag": "MBU", "patterns": ["Tell me about MBU", "Give me information about MBU", "MBU ranking", "significance of MBU"], "responses": ["Mohan Babu University is a multi-disciplinary offering varied courses. It is a 30 years of unwavering trust. A+ grade "], "context": [""]},
+        {"tag": "mbu", "patterns": ["Tell me about MBU", "Give me information about MBU", "MBU ranking", "significance of MBU"], "responses": ["Mohan Babu University is a multi-disciplinary offering varied courses. It is a 30 years of unwavering trust. A+ grade "], "context": [""]},
         {"tag": "chancellor", "patterns": ["Who is the chancellor of MBU?", "Chancellor"], "responses": ["Dr.M.Mohan Babu"], "context": [""]},
         {"tag": "pro chancellor", "patterns": ["Who is the pro chancellor of MBU?"], "responses": ["Vishnu Manchu"], "context": [""]},
         {"tag": "vice chancellor", "patterns": ["Who is the vice chancellor of MBU?"], "responses": ["Nagaraj Ramrao"], "context": [""]},
