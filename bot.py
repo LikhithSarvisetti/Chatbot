@@ -40,4 +40,17 @@ for idx, doc in enumerate(doc_X):
 random.shuffle(training)
 training = np.array(training, dtype=object)
 train_X = np.array(list(training[:, 0]))
-train_y = np.array(list(training[:, 1]))
+train_y = np.array(list(training[:, 1])) 
+
+input_shape, output_shape = (len(train_X[0]),), len(train_y[0])
+model = Sequential()
+model.add(Dense(128, input_shape=input_shape, activation="relu"))
+model.add(Dropout(0.5))
+model.add(Dense(64, activation="relu"))
+model.add(Dropout(0.3))
+model.add(Dense(output_shape, activation="softmax"))
+
+adam = tf.keras.optimizers.Adam(learning_rate=0.01, decay=1e-6)
+model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=["accuracy"])
+print(model.summary())
+model.fit(x=train_X, y=train_y, epochs=200, verbose=1)
