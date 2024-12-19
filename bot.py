@@ -77,4 +77,10 @@ def get_response(intents_list, intents_json):
     tag = intents_list[0]
     for i in intents_json["intents"]:
         if i["tag"] == tag:
-            return random.choice(i["responses"])
+            return random.choice(i["responses"]) 
+
+while True:
+    message = input("")
+    intents = pred_class(message, words, classes)
+    result = get_response(intents, data)
+    print(result)
