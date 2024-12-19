@@ -28,3 +28,16 @@ for intent in data["intents"]:
 
 words = [lemmatizer.lemmatize(word.lower()) for word in words if word not in string.punctuation]
 words, classes = sorted(set(words)), sorted(set(classes))
+
+training = []
+out_empty = [0] * len(classes)
+for idx, doc in enumerate(doc_X):
+    bow = [1 if word in nltk.word_tokenize(doc.lower()) else 0 for word in words]
+    output_row = list(out_empty)
+    output_row[classes.index(doc_y[idx])] = 1
+    training.append([bow, output_row])
+
+random.shuffle(training)
+training = np.array(training, dtype=object)
+train_X = np.array(list(training[:, 0]))
+train_y = np.array(list(training[:, 1]))
