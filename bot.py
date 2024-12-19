@@ -10,6 +10,7 @@ from tensorflow.keras.layers import Dense, Dropout
 nltk.download("punkt")
 nltk.download("wordnet")
 nltk.download('omw-1.4')
+nltk.download('punkt_tab')
 
 with open('data.json', 'r') as file:
     data = json.load(file)
