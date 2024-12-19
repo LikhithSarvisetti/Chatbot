@@ -54,3 +54,27 @@ adam = tf.keras.optimizers.Adam(learning_rate=0.01, decay=1e-6)
 model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=["accuracy"])
 print(model.summary())
 model.fit(x=train_X, y=train_y, epochs=200, verbose=1)
+
+def clean_text(text):
+    tokens = nltk.word_tokenize(text)
+    tokens = [lemmatizer.lemmatize(word) for word in tokens]
+    return tokens
+
+def bag_of_words(text, vocab):
+    tokens = clean_text(text)
+    bow = [1 if word in tokens else 0 for word in vocab]
+    return np.array(bow)
+
+def pred_class(text, vocab, labels):
+    bow = bag_of_words(text, vocab)
+    result = model.predict(np.array([bow]))[0]
+    thresh = 0.2
+    y_pred = [[idx, res] for idx, res in enumerate(result) if res > thresh]
+    y_pred.sort(key=lambda x: x[1], reverse=True)
+    return [labels[r[0]] for r in y_pred]
+
+def get_response(intents_list, intents_json):
+    tag = intents_list[0]
+    for i in intents_json["intents"]:
+        if i["tag"] == tag:
+            return random.choice(i["responses"])
