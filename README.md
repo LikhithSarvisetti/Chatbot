@@ -9,5 +9,7 @@ Contains all the data which is manually written on the basis of information gath
 
 My chatbot is my pure convention to help my juniors to know the basics about my college. 
 As a junior I faced alot of hurdles for guidance in college which I don't want to repeat with my juniors. 
+
+***
 This is a demo model only.
 You can change the json file and update as per your requirement. 
