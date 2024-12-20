@@ -1,20 +1,101 @@
-data = {
+{
     "intents": [
-        {"tag": "greeting", "patterns": ["Hi there", "How are you", "Good Morning","Is anyone there?", "Hey", "Hola", "Hello", "Good day"], "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"], "context": [""]},
-        {"tag": "goodbye", "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"], "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."], "context": [""]},
-        {"tag": "thanks", "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"], "responses": ["Happy to help!", "Any time!", "My pleasure"], "context": [""]},
-        {"tag": "noanswer", "patterns": [], "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"], "context": [""]},
-        {"tag": "mbu", "patterns": ["Tell me about MBU", "Give me information about MBU", "MBU ranking", "significance of MBU"], "responses": ["Mohan Babu University is a multi-disciplinary offering varied courses. It is a 30 years of unwavering trust. A+ grade "], "context": [""]},
-        {"tag": "chancellor", "patterns": ["Who is the chancellor of MBU?", "Chancellor"], "responses": ["Dr.M.Mohan Babu"], "context": [""]},
-        {"tag": "pro chancellor", "patterns": ["Who is the pro chancellor of MBU?"], "responses": ["Vishnu Manchu"], "context": [""]},
-        {"tag": "vice chancellor", "patterns": ["Who is the vice chancellor of MBU?"], "responses": ["Nagaraj Ramrao"], "context": [""]},
-        {"tag": "Registrar", "patterns": ["Who is the registrar of MBU?"], "responses": ["K.Saradhi"], "context": [""]},
-        {"tag": "Courses", "patterns": ["courses offered by MBU", "courses in mbu"], "responses": ["Engineering and technology,Management,Art and Design,Film Academy,Pharmacy"], "context": [""]},
-        {"tag": "Engineering and Technology", "patterns": ["Branches in B.Tech", "list of branches in B.Tech", "streams in B.Tech"], "responses": ["CSE,IT,ECE,MEC,CIVIL,AI,DS,IOT,ML,EIE"], "context": [""]},
-        {"tag": "Fees", "patterns": ["Fee Structure of B.tech", "Details of fee"], "responses": ["1.9 lakhs per year"], "context": [""]},
-        {"tag": "Events", "patterns": ["Events conducted", "Fests in college", "Cultural Activities"], "responses": ["Mohan Mantra the biggest fest in the college, Annual Day, Moon light Dinner, Freshers party and many more"], "context": [""]},
-        {"tag": "Clubs", "patterns": ["What type of clubs are available?", "clubs in college", "various clubs", "list of clubs", "departmental clubs"], "responses": ["Each and every department has their own clubs both technical and non-technical. Like IT has TAIT, CSI, WE-CODE, Dialog club etc"], "context": [""]},
-        {"tag": "Hostel", "patterns": ["Accommodation", "What about hostel facility?", "Hostel details", "Hostel facilities"], "responses": ["Both Boys and Girls have separate hostels nearby college. AC and NON-AC Rooms are available. Fee of hostel is based on your requirement."], "context": [""]},
-        {"tag": "Library", "patterns": ["Is library available?", "Library timings?", "Library facility"], "responses": ["The biggest library with all the facilities. E-library also available. Most peaceful place in the campus. Library timings 8.00 A.M to 8.00 P.M"], "context": [""]}
+      {
+        "tag": "greeting",
+        "patterns": ["Hi there", "How are you", "Good Morning", "Is anyone there?", "Hey", "Hola", "Hello", "Good day"],
+        "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+        "context": [""]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+        "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+        "context": [""]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"],
+        "context": [""]
+      },
+      {
+        "tag": "noanswer",
+        "patterns": [],
+        "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+        "context": [""]
+      },
+      {
+        "tag": "mbu",
+        "patterns": ["Tell me about MBU", "Give me information about MBU", "MBU ranking", "significance of MBU"],
+        "responses": ["Mohan Babu University is a multi-disciplinary offering varied courses. It is a 30 years of unwavering trust. A+ grade "],
+        "context": [""]
+      },
+      {
+        "tag": "chancellor",
+        "patterns": ["Who is the chancellor of MBU?", "Chancellor"],
+        "responses": ["Dr.M.Mohan Babu"],
+        "context": [""]
+      },
+      {
+        "tag": "pro chancellor",
+        "patterns": ["Who is the pro chancellor of MBU?"],
+        "responses": ["Vishnu Manchu"],
+        "context": [""]
+      },
+      {
+        "tag": "vice chancellor",
+        "patterns": ["Who is the vice chancellor of MBU?"],
+        "responses": ["Nagaraj Ramrao"],
+        "context": [""]
+      },
+      {
+        "tag": "Registrar",
+        "patterns": ["Who is the registrar of MBU?"],
+        "responses": ["K.Saradhi"],
+        "context": [""]
+      },
+      {
+        "tag": "Courses",
+        "patterns": ["courses offered by MBU", "courses in mbu"],
+        "responses": ["Engineering and technology, Management, Art and Design, Film Academy, Pharmacy"],
+        "context": [""]
+      },
+      {
+        "tag": "Engineering and Technology",
+        "patterns": ["Branches in B.Tech", "list of branches in B.Tech", "streams in B.Tech"],
+        "responses": ["CSE, IT, ECE, MEC, CIVIL, AI, DS, IOT, ML, EIE"],
+        "context": [""]
+      },
+      {
+        "tag": "Fees",
+        "patterns": ["Fee Structure of B.tech", "Details of fee"],
+        "responses": ["1.9 lakhs per year"],
+        "context": [""]
+      },
+      {
+        "tag": "Events",
+        "patterns": ["Events conducted", "Fests in college", "Cultural Activities"],
+        "responses": ["Mohan Mantra the biggest fest in the college, Annual Day, Moonlight Dinner, Freshers party and many more"],
+        "context": [""]
+      },
+      {
+        "tag": "Clubs",
+        "patterns": ["What type of clubs are available?", "clubs in college", "various clubs", "list of clubs", "departmental clubs"],
+        "responses": ["Each and every department has their own clubs both technical and non-technical. Like IT has TAIT, CSI, WE-CODE, Dialog club etc"],
+        "context": [""]
+      },
+      {
+        "tag": "Hostel",
+        "patterns": ["Accommodation", "What about hostel facility?", "Hostel details", "Hostel facilities"],
+        "responses": ["Both Boys and Girls have separate hostels nearby college. AC and NON-AC Rooms are available. Fee of hostel is based on your requirement."],
+        "context": [""]
+      },
+      {
+        "tag": "Library",
+        "patterns": ["Is library available?", "Library timings?", "Library facility"],
+        "responses": ["The biggest library with all the facilities. E-library also available. Most peaceful place in the campus. Library timings 8.00 A.M to 8.00 P.M"],
+        "context": [""]
+      }
     ]
-}
+  }
+  

@@ -85,3 +85,4 @@ while True:
     intents = pred_class(message, words, classes)
     result = get_response(intents, data)
     print(result)
+    break
